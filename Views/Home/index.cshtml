@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Dependency Visualizer</title>
+        <meta name="description" content="Dependency Visualizer">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="~/css/styles.css" />
+        <script>
+            var jsonString = JSON.parse('@Html.Raw(ViewBag.jsonString)');
+            var uinput = '@Html.Raw(ViewBag.uinput)';
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript" src="~/js/script.js"></script> 
+    </head>
+    <body>
+        <div id='container'>
+            <div id = 'side-container'>
+                <div id = "side-container-title">
+                    <h3 >Dependency Visualizer</h3>
+                    <form action="query" method="post">
+                        <label for="uinput">Search for a project: </label>
+                        <input type="text" name="uinput" id ="uinput"> 
+                        <div id = "main-button"><button class="waves-effect waves-light btn" type='submit'>View!</button></div>
+                    </form>
+                </div>
+            </div>
+            <div id = 'data-container'>
+                <div id="wordtree_basic"></div>
+            </div>      
+        </div>    
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">About</h5>
+                        <p class="grey-text text-lighten-4">Search for open source projects and view their dependencies in a graph! </p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="https://libraries.io/">Libraries.io</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://cloud.google.com/bigquery">Google BigQuery</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://developers.google.com/chart">Google Charts</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

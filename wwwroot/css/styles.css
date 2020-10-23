@@ -1,0 +1,76 @@
+html {
+    height: 100%;
+  }
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 830px;
+  }
+
+nav{
+    background-color: #c62828;
+}
+
+input{
+    color: #fafafa;
+}
+
+.btn{
+   background-color: #c62828
+}
+
+.btn:focus, .btn-large:focus, .btn-small:focus,
+.btn-floating:focus {
+  background-color: #e53935;
+}
+
+.btn:hover, .btn-large:hover, .btn-small:hover {
+  background-color: #e53935;
+}
+
+#container{  
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 auto;
+}
+
+#side-container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: center;
+    background: url("../images/circles.png") no-repeat;
+    background-size: cover;
+    background-color: #fafafa;
+    background-position: bottom;
+    /* min-height: 500px; */
+    min-width: 375px;
+}
+
+#side-container-title{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    margin-right: 10px; 
+    color: #fafafa;
+    width:50%;
+}
+
+#main-button{
+    display: flex;   
+    justify-content: flex-end;
+}
+
+#data-container{
+    display: flex;
+    flex-direction: column;
+    width: 68%;
+}
+
+.page-footer{
+    background-color: #000;
+}
